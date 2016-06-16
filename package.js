@@ -1,6 +1,6 @@
 Package.describe({
     name: 'universe:blaze-date-tiles',
-    version: '0.0.1',
+    version: '1.0.0',
     // Brief, one-line summary of the package.
     summary: 'Date tiles picker works as a standalone and as a autoform input',
     // URL to the Git repository containing the source code for this package.
