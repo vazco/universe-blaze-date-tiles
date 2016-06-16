@@ -1,0 +1,50 @@
+<template name="universeDateTiles">
+    <div class="date-tiles {{class}}">
+        <div class="month-year-bar">
+            {{#let monthYear = getData}}
+                <div class="year">
+                    <a class="prev-date js-prev-year"><i
+                            class="fa fa-angle-left"></i></a><span>{{monthYear.year}}</span>
+                    <a class="next-date js-next-year"><i class="fa fa-angle-right"></i></a>
+                </div>
+                <div class="selected-date">
+                    <a class="js-goto-selected"> {{getSelectedDate}} </a>
+                </div>
+                <div class="month">
+                    <a class="prev-date js-prev-month"><i
+                            class="fa fa-angle-left"></i></a><span>{{monthYear.month}}</span>
+                    <a class="next-date js-next-month"><i class="fa fa-angle-right"></i></a>
+                </div>
+            {{/let}}
+        </div>
+        <div class="dates-bar">
+            <a class="prev-date js-prev-day"><i class="fa fa-angle-left"></i></a>
+            {{#let arr=(_state 'tails')}}
+                <div class="tiles-space {{_state 'animateClass'}}">
+                    {{#each (_state 'tails')}}
+                        <a class="js-select-tile {{#if isSelected}}selected{{/if}}">
+                            <span class="date">{{day}}</span><span class="month">{{month}}</span>
+                        </a>
+                    {{/each}}
+                </div>
+            {{/let}}
+            <a class="next-date js-next-day"><i class="fa fa-angle-right"></i></a></div>
+        {{#if Template.contentBlock}}
+            <div class="date-tiles-wrap">
+                {{> Template.contentBlock getContentContext}}
+            </div>
+        {{/if}}
+    </div>
+</template>
+
+<template name="afUniverseDateTiles">
+    <div data-schema-key="{{name}}" name="{{name}}">
+        {{#if Template.contentBlock}}
+            {{#universeDateTiles _state=_state class=class name=name selectedDate=value currentDate=value}}
+                {{> Template.contentBlock }}
+            {{/universeDateTiles}}
+        {{else}}
+            {{> universeDateTiles _state=_state class=class name=name selectedDate=value currentDate=value}}
+        {{/if}}
+    </div>
+</template>
