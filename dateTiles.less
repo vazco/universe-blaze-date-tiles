@@ -154,12 +154,9 @@
       display : inline-block;
       border-right : 1px solid #E7E7E7;
       cursor : pointer;
-      transition : color .2s, transform .2s;
-      -webkit-transition : color .2s, transform .2s;
-      -moz-transition : color .2s, transform .2s;
       z-index : 0;
 
-      &.selected{
+      &.selected {
         color : #696969;
         > span.date {
           transform : scale(1.2, 1.2);
@@ -181,14 +178,6 @@
     &:hover{
       color : #686666;
     }
-
-    span {
-      transition : color .2s, transform .2s;
-      -webkit-transition : color .2s, -webkit-transform .2s;
-      -moz-transition : color .2s, -moz-transform .2s;
-    }
-
-
 
     a.prev-date,
     a.next-date {
