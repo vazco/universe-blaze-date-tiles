@@ -1,8 +1,14 @@
-## Abandonware
+<h1 align="center">
+    <a href="https://github.com/vazco">vazco</a>/Date Tiles Component for Blaze
+</h1>
 
-# Date Tiles Component for Blaze
+&nbsp;
 
-<img src="https://s32.postimg.org/tfykck0xh/tiles_Date.jpg"/>
+<h3 align="center">
+  -- Abandonware. This package is deprecated! --
+</h3>
+
+&nbsp;
 
 ### Using as standalone
 
@@ -42,3 +48,9 @@ autoform: {
      type: 'universeDateTiles',
 }
 ```
+
+### License
+
+<img src="https://vazco.eu/banner.png" align="right">
+
+**Like every package maintained by [Vazco](https://vazco.eu/), Date Tiles Component for Blaze is [MIT licensed](https://github.com/vazco/uniforms/blob/master/LICENSE).**
